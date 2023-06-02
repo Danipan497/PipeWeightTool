@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PipeWeightTool.Calculations;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,9 +15,10 @@ namespace PipeWeightTool
         [STAThread]
         static void Main()
         {
+            IPipe pipe = new Pipe();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Form1(pipe));
         }
     }
 }

@@ -31,8 +31,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.pipeNominalDiameterTextBox = new System.Windows.Forms.ComboBox();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.pipeMassResultLabel = new System.Windows.Forms.Label();
             this.wallThicknessTextComboBox = new System.Windows.Forms.ComboBox();
             this.materialComboBox = new System.Windows.Forms.ComboBox();
             this.pipeLengthTextBox = new System.Windows.Forms.TextBox();
@@ -45,7 +44,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(248, 85);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Show me message!";
+            this.button1.Text = "Calculate";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -65,25 +64,15 @@
             this.fileSystemWatcher1.EnableRaisingEvents = true;
             this.fileSystemWatcher1.SynchronizingObject = this;
             // 
-            // label1
+            // pipeMassResultLabel
             // 
-            this.label1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label1.Location = new System.Drawing.Point(545, 470);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(454, 47);
-            this.label1.TabIndex = 2;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label2.Location = new System.Drawing.Point(545, 388);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(454, 47);
-            this.label2.TabIndex = 3;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.pipeMassResultLabel.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pipeMassResultLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pipeMassResultLabel.Location = new System.Drawing.Point(545, 388);
+            this.pipeMassResultLabel.Name = "pipeMassResultLabel";
+            this.pipeMassResultLabel.Size = new System.Drawing.Size(454, 47);
+            this.pipeMassResultLabel.TabIndex = 3;
+            this.pipeMassResultLabel.Click += new System.EventHandler(this.label2_Click);
             // 
             // wallThicknessTextComboBox
             // 
@@ -121,8 +110,7 @@
             this.Controls.Add(this.pipeLengthTextBox);
             this.Controls.Add(this.materialComboBox);
             this.Controls.Add(this.wallThicknessTextComboBox);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pipeMassResultLabel);
             this.Controls.Add(this.pipeNominalDiameterTextBox);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
@@ -139,8 +127,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox pipeNominalDiameterTextBox;
         private System.IO.FileSystemWatcher fileSystemWatcher1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label pipeMassResultLabel;
         private System.Windows.Forms.ComboBox wallThicknessTextComboBox;
         private System.Windows.Forms.ComboBox materialComboBox;
         private System.Windows.Forms.TextBox pipeLengthTextBox;
