@@ -12,15 +12,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Net.Mime.MediaTypeNames;
+using PipeWeightTool.Calculations;
 
 namespace PipeWeightTool
 {
     public partial class Form1 : Form
     {
+        private readonly IPipe pipe;
         double pi = Math.PI;
-        public Form1()
+        public Form1(IPipe pipe)
         {
             InitializeComponent();
+            this.pipe = pipe;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -59,31 +62,18 @@ namespace PipeWeightTool
         private void button1_Click(object sender, EventArgs e)
         {
 
-            //Important - that's how I get values from SelectedValue Combobox.
-            //String s;
-            //s = (comboBox1.SelectedValue).ToString();
-            //double.TryParse(s, out double d);
-            //double result = d * d;
-            //label2.Text = result.ToString();
+
 
             double.TryParse(pipeNominalDiameterTextBox.SelectedValue.ToString(), out double nominalDiameterValue);
             double.TryParse(wallThicknessTextComboBox.SelectedValue.ToString(), out double wallThicknessValue);
             int.TryParse(materialComboBox.SelectedValue.ToString(), out int materialValue);
-            double pipeLength = Convert.ToDouble(pipeLengthTextBox.Text);
+            double.TryParse(pipeLengthTextBox.Text, out double pipeLength);
 
-            double pipeMassResult1 = Math.Pow((nominalDiameterValue / 1000) / 2, 2);
-            double pipeMassResult2 = Math.Pow(((nominalDiameterValue / 1000) - 2 * (wallThicknessValue / 1000)) / 2, 2);
-
-            double result = (pi * (pipeMassResult1 - pipeMassResult2) * pipeLength) * materialValue;
-            label2.Text = result.ToString("N2");
+            string result = pipe.CalculatePipeWeight(nominalDiameterValue, wallThicknessValue, pipeLength, materialValue);
+            pipeMassResultLabel.Text = result;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
         {
 
         }
