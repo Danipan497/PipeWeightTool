@@ -58,9 +58,6 @@ namespace PipeWeightTool
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-
-
             double.TryParse(pipeNominalDiameterTextBox.SelectedValue.ToString(), out double nominalDiameterValue);
             double.TryParse(wallThicknessTextComboBox.SelectedValue.ToString(), out double wallThicknessValue);
             int.TryParse(materialComboBox.SelectedValue.ToString(), out int materialValue);
