@@ -70,19 +70,16 @@ namespace PipeWeightTool
             pipeMassResultLabel.Text = result;
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void pipeLengthTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != ','))
+            {
+                e.Handled = true;
+            }
+            if ((e.KeyChar == ',') && ((sender as TextBox).Text.IndexOf(',') > -1))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

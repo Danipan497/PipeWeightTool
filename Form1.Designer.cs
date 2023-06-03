@@ -57,7 +57,6 @@
             this.pipeNominalDiameterTextBox.Name = "pipeNominalDiameterTextBox";
             this.pipeNominalDiameterTextBox.Size = new System.Drawing.Size(248, 28);
             this.pipeNominalDiameterTextBox.TabIndex = 1;
-            this.pipeNominalDiameterTextBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // fileSystemWatcher1
             // 
@@ -72,7 +71,6 @@
             this.pipeMassResultLabel.Name = "pipeMassResultLabel";
             this.pipeMassResultLabel.Size = new System.Drawing.Size(454, 47);
             this.pipeMassResultLabel.TabIndex = 3;
-            this.pipeMassResultLabel.Click += new System.EventHandler(this.label2_Click);
             // 
             // wallThicknessTextComboBox
             // 
@@ -83,7 +81,6 @@
             this.wallThicknessTextComboBox.Name = "wallThicknessTextComboBox";
             this.wallThicknessTextComboBox.Size = new System.Drawing.Size(248, 28);
             this.wallThicknessTextComboBox.TabIndex = 4;
-            this.wallThicknessTextComboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // materialComboBox
             // 
@@ -101,6 +98,7 @@
             this.pipeLengthTextBox.Name = "pipeLengthTextBox";
             this.pipeLengthTextBox.Size = new System.Drawing.Size(248, 26);
             this.pipeLengthTextBox.TabIndex = 6;
+            this.pipeLengthTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.pipeLengthTextBox_KeyPress);
             // 
             // Form1
             // 
