@@ -10,8 +10,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using static System.Net.Mime.MediaTypeNames;
 using PipeWeightTool.Calculations;
 
 namespace PipeWeightTool
@@ -29,7 +27,6 @@ namespace PipeWeightTool
         private void Form1_Load(object sender, EventArgs e)
         {
             Populate();
-
         }
 
         private void Populate()

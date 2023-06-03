@@ -49,6 +49,8 @@
     <Compile Include="Attributes\DataNamesAttribute.cs" />
     <Compile Include="Calculations\IPipe.cs" />
     <Compile Include="Calculations\Pipe.cs" />
+    <Compile Include="CustomException\WallThicknessBiggerThanHalfOfPipeNominalDiameterException.cs" />
+    <Compile Include="CustomException\WallThicknessBiggerThanPipeNominalDiameterException.cs" />
     <Compile Include="PipesProperties\PipeSettings.cs" />
     <Compile Include="DataSets\DataSetsGenerator.cs" />
     <Compile Include="Form1.cs">
