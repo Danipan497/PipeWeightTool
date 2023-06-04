@@ -17,7 +17,6 @@ namespace PipeWeightTool
     public partial class Form1 : Form
     {
         private readonly IPipe pipe;
-        double pi = Math.PI;
         public Form1(IPipe pipe)
         {
             InitializeComponent();
