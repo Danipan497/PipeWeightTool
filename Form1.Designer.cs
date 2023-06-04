@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.calculateButton = new System.Windows.Forms.Button();
-            this.pipeNominalDiameterTextBox = new System.Windows.Forms.ComboBox();
+            this.pipeNominalDiameterComboBox = new System.Windows.Forms.ComboBox();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.pipeMassResultLabel = new System.Windows.Forms.Label();
             this.wallThicknessTextComboBox = new System.Windows.Forms.ComboBox();
@@ -53,15 +53,15 @@
             this.calculateButton.UseVisualStyleBackColor = true;
             this.calculateButton.Click += new System.EventHandler(this.button1_Click);
             // 
-            // pipeNominalDiameterTextBox
+            // pipeNominalDiameterComboBox
             // 
-            this.pipeNominalDiameterTextBox.AllowDrop = true;
-            this.pipeNominalDiameterTextBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.pipeNominalDiameterTextBox.FormattingEnabled = true;
-            this.pipeNominalDiameterTextBox.Location = new System.Drawing.Point(125, 80);
-            this.pipeNominalDiameterTextBox.Name = "pipeNominalDiameterTextBox";
-            this.pipeNominalDiameterTextBox.Size = new System.Drawing.Size(250, 28);
-            this.pipeNominalDiameterTextBox.TabIndex = 1;
+            this.pipeNominalDiameterComboBox.AllowDrop = true;
+            this.pipeNominalDiameterComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.pipeNominalDiameterComboBox.FormattingEnabled = true;
+            this.pipeNominalDiameterComboBox.Location = new System.Drawing.Point(125, 80);
+            this.pipeNominalDiameterComboBox.Name = "pipeNominalDiameterComboBox";
+            this.pipeNominalDiameterComboBox.Size = new System.Drawing.Size(250, 28);
+            this.pipeNominalDiameterComboBox.TabIndex = 1;
             // 
             // fileSystemWatcher1
             // 
@@ -164,7 +164,7 @@
             this.Controls.Add(this.materialComboBox);
             this.Controls.Add(this.wallThicknessTextComboBox);
             this.Controls.Add(this.pipeMassResultLabel);
-            this.Controls.Add(this.pipeNominalDiameterTextBox);
+            this.Controls.Add(this.pipeNominalDiameterComboBox);
             this.Controls.Add(this.calculateButton);
             this.Name = "Form1";
             this.Text = "Pipe weight tool";
@@ -178,7 +178,7 @@
         #endregion
 
         private System.Windows.Forms.Button calculateButton;
-        private System.Windows.Forms.ComboBox pipeNominalDiameterTextBox;
+        private System.Windows.Forms.ComboBox pipeNominalDiameterComboBox;
         private System.IO.FileSystemWatcher fileSystemWatcher1;
         private System.Windows.Forms.Label pipeMassResultLabel;
         private System.Windows.Forms.ComboBox wallThicknessTextComboBox;
