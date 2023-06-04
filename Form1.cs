@@ -3,12 +3,7 @@ using PipeWeightTool.DataSets;
 using PipeWeightTool.Mapping;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using PipeWeightTool.Calculations;
 
@@ -17,7 +12,6 @@ namespace PipeWeightTool
     public partial class Form1 : Form
     {
         private readonly IPipe pipe;
-        double pi = Math.PI;
         public Form1(IPipe pipe)
         {
             InitializeComponent();
