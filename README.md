@@ -1,4 +1,4 @@
-# PipeWeightCalculator
+# PipeWeighttool
 Complex pipe weight calculator:
 
 - Dependency Injection,
